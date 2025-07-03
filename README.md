@@ -1,5 +1,5 @@
 # Template - Deploy Gemma–3n‑E4B‑It using Inferless 
-Gemma–3n‑E4B‑It is Google’s instruction‑tuned variant of the lightweight Gemma 3n series, designed for efficient multimodal inference on resource‑constrained hardware. With a raw 8B‑parameter architecture, it implements a nested “MatFormer” design that operates with an effective 4 billion‑parameter memory footprint, enabling it to run on devices with as little as ~3 GB of VRAM while still delivering full-featured capabilities.
+Gemma–3n‑E4B‑It is Google’s instruction‑tuned variant of the lightweight Gemma 3n series, designed for efficient multimodal inference on resource‑constrained hardware. With a raw 8B‑parameter architecture, it implements a nested “MatFormer” design that operates with an effective 4B‑parameter memory footprint, enabling it to run on devices while still delivering full-featured capabilities.
 
 
 ## TL;DR:
