@@ -3,7 +3,7 @@ Gemma–3n‑E4B‑It is Google’s instruction‑tuned variant of the lightweig
 
 
 ## TL;DR:
-- Deployment of FLUX.1-Kontext-dev model using [transformers](https://github.com/huggingface/transformers).
+- Deployment of Gemma–3n‑E4B‑It model using [transformers](https://github.com/huggingface/transformers).
 - Dependencies defined in `inferless-runtime-config.yaml`.
 - GitHub/GitLab template creation with `app.py`, `inferless-runtime-config.yaml` and `inferless.yaml`.
 - Model class in `app.py` with `initialize`, `infer`, and `finalize` functions.
@@ -41,17 +41,46 @@ curl --location '<your_inference_url>' \
     --header 'Authorization: Bearer <your_api_key>' \
     --data '{
       "inputs": [
-                  {
-                        "name": "prompt",
-                        "shape": [1],
-                        "data": ["Add a hat to the cat"],
-                        "datatype": "BYTES"},
-                  {
-                        "name": "image_url",
-                        "optional": true,
-                        "shape": [1],
-                        "data": ["https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/cat.png"],
-                        "datatype": "BYTES"}
+                    {
+                      "name": "prompt",
+                      "shape": [1],
+                      "data": ["Describe this image in detail."],
+                      "datatype": "BYTES"
+                    },
+                    {
+                      "name": "image_url",
+                      "shape": [1],
+                      "data": ["https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/bee.jpg"],
+                      "datatype": "BYTES"
+                    },
+                    {
+                      "name": "system_prompt",
+                      "optional": true,
+                      "shape": [1],
+                      "data": ["You are a helpful assistant."],
+                      "datatype": "BYTES"
+                    },
+                    {
+                      "name": "max_new_tokens",
+                      "optional": true,
+                      "shape": [1],
+                      "data": [128],
+                      "datatype": "INT32"
+                    },
+                    {
+                      "name": "temperature",
+                      "optional": true,
+                      "shape": [1],
+                      "data": [0.1],
+                      "datatype": "FP64"
+                    },
+                    {
+                      "name": "top_p",
+                      "optional": true,
+                      "shape": [1],
+                      "data": [1.0],
+                      "datatype": "FP64"
+                    }
     ]
 }'
 ```
