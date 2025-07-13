@@ -1,0 +1,12 @@
+build:
+  cuda_version: "12.1.1"
+  python_packages:
+    - "inferless==0.2.15"
+    - "pydantic==2.11.7"
+    - "accelerate==1.8.1"
+    - "torch==2.7.1"
+    - "transformers==4.53.0"
+    - "pillow==11.3.0"
+    - "timm==1.0.16"
+    - "hf-transfer==0.1.9"
+    - "huggingface-hub==0.33.1"
